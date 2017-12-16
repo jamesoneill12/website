@@ -1,9 +1,9 @@
 ---
 layout: page
-title: James T. O' Neill
+title: About
 ---
 
-I am currently a Research Assistant at the [Insight Center for Data Analytics](https://nuig.insight-centre.org) at the [National University of Ireland, Galway](http://www.nuigalway.ie/).
+I (James T. O' Neill) am currently a Research Assistant at the [Insight Center for Data Analytics](https://nuig.insight-centre.org) at the [National University of Ireland, Galway](http://www.nuigalway.ie/).
 [Unit for Natural Language Processing](https://nuig.insight-centre.org/unlp/). I will be pursuing a PhD in Reinforcement Learning for Natural Language Understanding 
 at the Computer Science department of [University of Liverpool](https://www.liverpool.ac.uk/computer-science/about/) under the supervision of [Dr. Danushka Bollegala](https://www.liverpool.ac.uk/computer-science/staff/danushka-bollegala/).
 
