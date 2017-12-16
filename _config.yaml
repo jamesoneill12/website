@@ -1,1 +1,11 @@
+# basic options
+title: Your awesome title
+author: James O' Neill
+email: jamesoneill1258@gmail.com
+description: Personal Site
+twitter_username: JamesONeil21
+github_username:  jamesoneill12
 
+# Build settings
+markdown: kramdown
+theme: minima
