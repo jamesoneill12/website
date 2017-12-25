@@ -11,13 +11,18 @@
 						<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 						<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 						<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+						<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+						<script> 
+						$(function(){
+							$("#header").load("header.html"); 
+							$("#footer").load("footer.html"); 
+						});
+						</script>
+								
 					</head>
 
 					<body>
-						
-						<div w3-include-html="header.html"></div>
-
+					
 						<h2 id="title-about"> James O' Neill - PhD Student in Reinforcement Learning in Natural Language Understanding</h1>
 								<p>I am currently a Research Assistant at the <a href="https://nuig.insight-centre.org">Insight Center for Data Analytics</a> at the <a href="http://www.nuigalway.ie/">National University of Ireland, Galway</a>.
 									<a href="https://nuig.insight-centre.org/unlp/">Unit for Natural Language Processing</a>. I will be pursuing a PhD in Reinforcement Learning for Natural Language Understanding 
