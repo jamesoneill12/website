@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Horizontal Learning</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/research.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="header">
+    <h2>Research Interests<</h2>
+  </div>
+
+<div class="topnav">
+  <a href="research/capsule_networks.html">Capsule Networks</a>
+  <a href="research/adversarial_networks.html">Adversarial Networks</a>
+  <a href="research/reinforcement_learning.html">Reinforcement Learning</a>
+  <a href="research/graph_modelling.html">Graph Structure Modelling</a>
+  <a href="research/horizontal_learning.html">Transfer Learning</a>
+  <a href="research/search.html">Search</a>
+  <a href="research/other.html" style="float:right">Other</a>
+</div>
+
+  <h2>Generative Modeling for Text Generation</h2>
+  For classification, discriminative modeling involves direct posterior estimation, the conditional probability $latex p(y|x)$. In generative modeling the joint distrbution $latex p(x,y)$ is first estimated and then prediction is carried out using Bayes rule. In this sense, generative models are not only used for prediction but also for interpolation of likely sample pairs $latex (x,y)$ from the estimated posterior.
+  Ng and Jordan ~\cite{ng2002discriminative} in 2002 discuss this in their paper \textit{On Discriminative vs. Generative classifiers: A comparison of logistic regression and naive Bayes}. They tested the hypothesis that discriminative models such as logistic regression perform better as the datasets size grows, but for initial performance on smaller batches, generative models such as Naive Bayes are favored.
+  When the task involves direct estimation of $latex p(x,y)$ it makes sense to directly estimate the underlying distribution using a generative model, given that are enough instances to train on, proportional to the number of parameters in the generative model. Furthermore, generative models have the benefit of interpolating to unseen instances in $latex \mathcal{D}$ e.g generating whole new sentences in continuous space and not being bounded by the vocabulary only existing in $latex \mathcal{D}$.
+  Bowman et al ~\cite{bowman2015generating} generated sentences from a continuous space using an RNN variational autoencoder language model, essentially generating whole sentence instead of word by word predictions. This true type of generative modeling better captures higher level syntactic attributes of the sentences and underlying joint distribution. Typically, coherency in new generated sentences is difficult. That is to say, what type of constraints need to be used for generative models to produce new sentences that are highly coherent but yet unique in their interpolation. This is a potential research question I would be interested in pursuing.
+
+  Additionally, generative models such as Generative Adversarial Networks (GANs) and Variational Autoencoders (VAEs) have seen great success recently, primarily on vision tasks. Although, only very recently have generative models made an impact on NLP text generation. Hu et al.~\cite{hu2017toward} have proposed to use VAEs that use the wake sleep algorithm to generate fake samples of short sentences during the sleep phase that are then fed back in the training process during the wake phase. The model is based off ~\cite{bowman2015generating}
+
+  \textbf{Applying discriminators to text generation is hard due to the non-differentiability of discrete samples (Yu et al., 2017; Zhang et al., 2016; Kusner \&amp; Hernndez-Lobato, 2016). Bowman et al. (2015); Tang et al. (2016); Yang et al. (2017) instead use VAEs without discriminators. All these text generation methods do not learn disentangled latent representations, resulting in randomized and uncontrollable samples. In contrast, disentangled
+  generation in visual domain has made impressive progress. E.g., InfoGAN (Chen et al., 2016), which resembles the extended sleep procedure of our joint VAE/wakesleep algorithm, disentangles latent representation in an unsupervised manner. The semantic of each dimension is observed after training rather than designated by users in a controlled way. Siddharth et al. (2017); Kingma et al.
+  (2014) base on VAEs and obtain disentangled image representations with semi-supervised learning. Zhou \&amp; NeuToward Controlled Generation of Text big (2017) extend semi-supervised VAEs for text transduction. In contrast, our model combines VAEs with discriminators which provide a better, holistic metric compared to element-wise reconstruction. Moreover, most of these approaches have only focused on the disentanglement of the structured part of latent representations, while ignoring potential dependence of the structured code with attributes not explicitly encoded. We address this by introducing an independency constraint, and show its effectiveness for improved interpretability.}
+
+  Also, GANs in particular are notoriously difficult to train, which arises the question, <em>What controls should be used to ensure stability and convergence when training GANs for in continuous embedding space</em> $latex \mathcal{X}$ ?. Hu et al.'s paper has made a start on answering this for text generation with VAEs but this is only the beginning of this kind of work where many improvements are still to be made to generate human level novel coherent sentences.
+
+  &nbsp;
+
+</body>
+
+
+</html>
